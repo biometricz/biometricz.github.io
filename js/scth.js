@@ -29,6 +29,7 @@ function gotResult(err, results) {
   classifyVideo();
 }
 
+/*
 window.onload = function() {
 
   // Создаем объект XMLHttpRequest, при помощи которого будем отправлять запрос
@@ -79,3 +80,4 @@ window.onload = function() {
   req.send();
 
 }
+*/
