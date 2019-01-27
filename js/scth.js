@@ -3,20 +3,20 @@ let video;
 
 function setup() {
   noCanvas();
-  // Create a camera input
+  // Создание видеозахвата
   video = createCapture(VIDEO);
-  // Initialize the Image Classifier method with MobileNet and the video as the second argument
+  // Инициализация классификатора изображений и видеопотока
   classifier = ml5.imageClassifier('MobileNet', video, modelReady);  
 }
 
 function modelReady() {
-  // Change the status of the model once its ready
+  // Статус готовности для модели
   select('#status').html('Модель загружена');
   // Call the classifyVideo function to start classifying the video
   classifyVideo();
 }
 
-// Get a prediction for the current video frame
+  // Получаем прогноз для текущего видеокадра
 function classifyVideo() {
   classifier.predict(gotResult);
 }
