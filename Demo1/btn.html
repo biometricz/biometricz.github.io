@@ -114,7 +114,8 @@
 				blu_event('toggle','{"value":' + flag +'}');
 				
 				var message = ' + flag +';
-$.get('https://approbatory-conspir.000webhostapp.com/video/index.php', {message:message}, function(data)
+$.get('https://approbatory-conspir.000webhostapp.com/video/index.php', {message:message}, function(data) {
+	alert('Сервер ответил: '+data);
 			}
 		</script>
 	  
@@ -122,7 +123,7 @@ $.get('https://approbatory-conspir.000webhostapp.com/video/index.php', {message:
 <script language="javascript">
 var message = 'Hello, server!';
 $.get('https://approbatory-conspir.000webhostapp.com/video/index.php', {message:message}, function(data)	{
-	alert('Сервер ответил: '+data);
+	
 });
 </script>
 -->
