@@ -1,0 +1,40 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+<style>
+.range{
+    -webkit-appearance: none;
+    border-radius: 2px;
+    width: 600px;
+    height: 10px;
+    outline: none;
+    background-color: #f1f1f1;
+    background:#eee;
+}
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:18px;
+    height:18px;
+    background:#D4D4D4;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.1s;
+}
+</style>
+
+<center>
+        <div class="val" style="
+        position: relative;
+        top: 300px;
+    "></div>
+<div class="inputs" style="position: relative;top: 300px;">
+        <input type="range" class="range" min="0" max="100" value="0" step="1" id="calc_l_m_range" oninput="range()">
+</div>
+</center>
+
+<script>
+
+        function range(){
+            var val = $('.range').val();$('.val').html(val);
+            $('.range').css({'background-image':'-webkit-linear-gradient(left ,#505050 0%,#9e9e9e '+val+'%,#E0E0E0 '+val+'%, #fff 100%)'});
+         }
+        
+        </script>
