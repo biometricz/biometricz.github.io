@@ -28,6 +28,14 @@
 </center>
 
 <script>
+    
+    $(document).ready(function(){
+  $(".onf").toggle(
+    function(){$(".onf").html('насосы включены').css({"color": "green"});},
+    function(){$(".onf").html('насосы выключены').css({"color": "red"});
+  });
+});
+    
 
         function range(){
             var val = $('.range').val();$('.val').html(val+'%');
