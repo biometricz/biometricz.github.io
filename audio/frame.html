@@ -135,7 +135,7 @@
          
 
           function changes() {
-      document.getElementById('rs').innerHTML=(results[0].confidence + ' <br> ' + results[1].confidence + ' <br> ' + results[2].confidence + ' <br> ' + results[3].confidence);
+      document.getElementById('rs').innerHTML=(results[0].label +' = '+ results[0].confidence + ' <br> ' + results[1].label +' = '+ results[1].confidence + ' <br> ' + results[2].label +' = '+ results[2].confidence + ' <br> ' + results[3].label +' = '+ results[3].confidence;
       console.log(results + ' [ ]');
       console.log(results[0].confidence + ' [0]');
       console.log(results[1].confidence + ' [1]');        
