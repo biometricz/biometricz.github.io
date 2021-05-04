@@ -1,1 +1,96 @@
+<html>
+    <head>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+        <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+        <link rel="stylesheet" href="css/testB.css"/>
+        
+    <style>
+    </style>
+        
+      </head>    
+      <body> 
+        
+ <div class="otpu">
+   <div class="outp">
+     <span id="lbl" class="lbl" style="text-align: center;"> ? </span>
+      <br/>
+     <span id="cnf" class="cnf" style="text-align: center;"> % </span>
+     
+     <span id="wdt" class="wdt" style="text-align: center;"> шир </span>
+
+     <span id="hgt" class="hgt" style="text-align: center;"> выс </span>
+     
+     <span id="rs" class="rs" style="text-align: center;"> вывод </span>
+    </div>
+  </div>
+        <script type="text/javascript">
+          
+        let classifier;                                                // Store the classifier
+        
+        let label = 'cлушаю...';                                       // Label
+        
+        let soundModel = "https://blckhle.github.io/mdl/";             // Model   
+        
+        function preload() {
+          classifier = ml5.soundClassifier(soundModel + 'model.json'); // Load the model
+        }
+        
+        function setup() {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var width = w - 200;
+        var height = h - 200;
+          createCanvas( width, height);
+          // background(0);
+          // fill(255);
+          // Start classifying
+          // The sound model will continuously listen to the microphone
+          classifier.classify(gotResult);
+        }
+        
+        function draw() {
+          // background(0);
+          // Draw the label in the canvas
+          fill(255);
+          textSize(32);
+          textAlign(CENTER, CENTER);
+          text(label, width / 2, height / 2);
+        }
+        
+        
+       
+        function gotResult(error, results) {.    // The model recognizing a sound will trigger this event
+          if (error) {
+            console.error(error);
+            return;                              // The results are in an array ordered by confidence.
+          }
+         
+
+          function changes() {
+      document.getElementById('rs').innerHTML=(results[0]);
+      console.log(results + ' [ ]');
+      console.log(results[0] + ' [0]');
+      console.log(results[1] + ' [1]');        
+      console.log(results[2] + ' [2]');
+      console.log(results[3] + ' [3]');
+      console.log(results[4] + ' [4]');
+      console.log(results[5] + ' [5]');
+
+      document.getElementById('lbl').innerHTML=(results[0].label);
+      document.getElementById('cnf').innerHTML=(results[0].confidence);
+      document.getElementById('wdt').innerHTML=(width);
+      document.getElementById('hgt').innerHTML=(height);
+    } changes()
+
+
+          // console.log(results[0]);
+          // label = results[0].label;
+        }
+        </script>
+        
+    </body>
+    
+    </html>
