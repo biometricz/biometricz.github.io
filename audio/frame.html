@@ -40,6 +40,17 @@
     top: 35px;
     left: 31px;
     content: "↓";}
+        
+.xy::before { 
+    position: absolute;
+    top: -45px;
+    left: 31px;
+    content: "↑";}         
+.xy::after { 
+    position: absolute;
+    top: 35px;
+    left: 31px;
+    content: "↓";}
    </style>
         
       </head> 
@@ -53,9 +64,20 @@
        
        <div class="HW_inf">
      <span id="wdt" class="wdt" style="color: chartreuse;position: fixed;top: 75%;left: 11px;"> </span> 
-           <span style="
-    position: absolute;left: 15vh;bottom: 8vh;color: #ffeb3b;text-decoration: overline;width: 8vh;
-                        "> [x],[y] </span>
+<span class="xy" style="
+    position: absolute;
+    left: 12.5vh;
+    bottom: 5vh;
+    color: #ffeb3b;
+    text-decoration: overline;
+    width: 20vh;
+    height: 20vh;
+    color: transparent;
+    /* background-color: antiquewhite; */
+    border-bottom: 2px solid chartreuse;
+    border-left: 2px solid chartreuse;
+    border-radius: 0px 0px 0px 7px;
+    "> </span>
      <span id="hgt" class="hgt" style="color: chartreuse;position: fixed;left: 15%;bottom: 10px;"> </span>
        </div>
        
