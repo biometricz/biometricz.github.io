@@ -76,14 +76,12 @@
          
 
           function changes() {
-      document.getElementById('rs').innerHTML=(results[0]);
+      document.getElementById('rs').innerHTML=(results[0].confidence + ' <br> ' + results[1].confidence + results[2].confidence + results[3].confidence);
       console.log(results + ' [ ]');
       console.log(results[0] + ' [0]');
-      console.log(results[1] + ' [1]');        
-      console.log(results[2] + ' [2]');
-      console.log(results[3] + ' [3]');
-      console.log(results[4] + ' [4]');
-      console.log(results[5] + ' [5]');
+      console.log(results[1].confidence + ' [1]');        
+      console.log(results[2].confidence + ' [2]');
+      console.log(results[3].confidence + ' [3]');
 
       document.getElementById('lbl').innerHTML=(results[0].label);
       document.getElementById('cnf').innerHTML=(results[0].confidence);
