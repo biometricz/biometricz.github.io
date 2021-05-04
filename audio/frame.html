@@ -140,18 +140,17 @@ span.lbl {float: left;}
 
           function changes() { // console.log(results + ' [ ]');
       document.getElementById('rs').innerHTML=( '<span class="lbl">' + results[0].label + ' = </span>' + results[0].confidence.toFixed(7) + ' <br> ' + '<span class="lbl">' + results[1].label + ' = </span>' + results[1].confidence.toFixed(7) + ' <br> ' + '<span class="lbl">' + results[2].label + ' = </span>' + results[2].confidence.toFixed(7) + ' <br> ' + '<span class="lbl">' + results[3].label + ' = </span>' + results[3].confidence.toFixed(7));
-      console.log(results[0].label + ' = ' + results[0].confidence );
+   /* console.log(results[0].label + ' = ' + results[0].confidence );
       console.log(results[1].label + ' = ' + results[1].confidence );        
       console.log(results[2].label + ' = ' + results[2].confidence );
-      console.log(results[3].label + ' = ' + results[3].confidence );
+      console.log(results[3].label + ' = ' + results[3].confidence ); */
 /*                                                                                                                                 */
       document.getElementById('lbl').innerHTML=(results[0].label);
       document.getElementById('cnf').innerHTML=(results[0].label +' = '+ results[0].confidence.toFixed(3)+'%');
       document.getElementById('wdt').innerHTML=(width);
       document.getElementById('hgt').innerHTML=(height);
-                                                        } changes()
-    
-        }
+             } changes()
+            }
         </script>
         
     </body>
