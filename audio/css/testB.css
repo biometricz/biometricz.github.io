@@ -1,0 +1,68 @@
+/******
+        библиотеки коннектят фоном в бэке, 
+        в момент оптимизиция запросов, данными ******************************************************************************************/
+/**********************************************************************************************************************************************/
+/******/@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');/***************************************************/
+/**********************************************************************************************************************************************/
+    
+/*
+
+
+*/
+
+body {
+    margin: 0;
+    font-family: 'Jura', sans-serif;
+      }
+    .initAnalyze {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: lightsteelblue;
+    color: white;
+    font-size: 4em;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Jura', sans-serif;
+        }
+    div { 
+    padding-top: 15px;padding-bottom: 15px;}
+    canvas{
+display: none;
+        }
+      .otpu {
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+            }
+      .outp {
+    font-size: 3em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    color: #00ffff66;
+          } 
+    span#lbl, span#cnf {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: block;
+          }
+      #cnf {
+    position: fixed;
+    bottom: 0;
+    right: 35px;
+           }
+       #cnf {
+     position: fixed;
+    /* top: 0;
+     left: 20px; */
+          }
+     #lbl {
+    position: fixed;
+    top: 0;
+    left: 20px;
+         }
