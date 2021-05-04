@@ -15,7 +15,7 @@ body {
     font-family: 'Jura', sans-serif;
       }
     .initAnalyze {
-    text-align: center;
+    /*text-align: center;*/
     width: 100%;
     position: absolute;
     padding-top: 15px;
@@ -28,19 +28,19 @@ body {
         }
     div { 
     padding-top: 15px;padding-bottom: 15px;}
-    canvas{
+    canvas {
 display: none;
         }
       .otpu {
-    text-align: center;
+    /*text-align: center;*/
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
             }
       .outp {
-    font-size: 3em;
-    text-align: center;
+    font-size: 2em;
+    /*text-align: center;*/
     justify-content: center;
     align-items: center;
     display: block;
