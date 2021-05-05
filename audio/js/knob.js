@@ -15,7 +15,7 @@ var app = new Vue({
         effects: [
             { 
                 id: 0,
-                label: 'Spread',
+                label: 'Панорама',
                 knobs: [
                     {
                         label: 'Amount',
@@ -40,7 +40,7 @@ var app = new Vue({
             },
             { 
                 id: 1,
-                label: 'Chorus',
+                label: 'Хор',
                 knobs: [
                     {
                         label: 'Dry/Wet',
@@ -65,7 +65,7 @@ var app = new Vue({
             },
             { 
                 id: 2,
-                label: 'Delay',
+                label: 'Задержка',
                 knobs: [
                     {
                         label: 'Dry/Wet',
