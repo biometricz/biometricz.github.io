@@ -1,0 +1,166 @@
+<html lang="ru">
+    <head>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+        <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+        <link rel="stylesheet" href="css/testB.css"/>
+        <link rel="stylesheet" href="css/frame.css"/>     
+        <style>
+    body{overflow:hidden;background:transparent;}
+    #rs {
+    position: fixed;
+    top: 0;
+    margin: 10px;
+    right: 0;
+    padding-top: 10px;
+    color: #cc00ff;
+    padding-right: 10px;
+    text-align: right;
+    font-size: .45em;
+    padding-left: 20px;
+    border-radius: 3px;
+    padding-bottom: 20px;
+    width: 210px;}
+        
+span.lbl {float: left;}
+        
+.HW_inf{
+    position: absolute;
+    bottom: 5px;
+    left: 15px;}
+
+.hgt::after {       
+    position: absolute;
+    top: 0px;
+    left: 69px;
+    content: "→";}  
+.hgt::before {       
+    position: absolute;
+    top: 0PX;
+    left: -37px;
+    content: "←";}
+        
+.wdt::before { 
+    position: absolute;
+    top: -45px;
+    left: 31px;
+    content: "↑";}         
+.wdt::after { 
+    position: absolute;
+    top: 35px;
+    left: 31px;
+    content: "↓";}
+        
+.xy::before { 
+    position: relative;
+    top: 88px;
+    color: chartreuse;
+    left: 11px;
+    content: "px";
+    font-size: 75%;}         
+.xy::after { 
+    position: relative;
+    top: 125px; color: #ffc107;
+    left: 75px;color: transparent;
+    content: "x →";}
+   </style>
+        
+      </head> 
+      <body> 
+        
+ <div class="otpu">
+   <div class="outp">
+     <span id="lbl" class="lbl" style="text-align:left;color:aquamarine;">  </span>
+      <br/>
+     <span id="cnf" class="cnf" style="
+    color: chartreuse;
+    bottom: 80px;
+    right: 15px;
+    padding: 10px;
+    border: 2px dashed;
+    border-radius: 5px;
+                                       ">  </span>
+       
+       <div class="HW_inf">
+  <span id="wdt" class="wdt" style="color: chartreuse;position: fixed;bottom: 200px; left: 11px;"> </span> 
+<span class="xy" style="
+    position: absolute;
+    left: 33px;
+    bottom: 18px;
+    color: #ffeb3b;
+    text-decoration: overline;
+    width: 130px;
+    height: 130px;
+    color: transparent;
+    border-bottom: 2px dashed chartreuse;
+    border-left: 2px dashed chartreuse;
+    border-radius: 0px 0px 0px 7px;
+                        "> </span>
+     <span id="hgt" class="hgt" style="color: chartreuse;position: fixed;left: 225px;bottom: 10px;"> </span>
+       </div>
+       
+      <span id="rs" class="rs"> >_ </span>
+    </div>
+  </div>
+        <script type="text/javascript">
+          
+        let classifier;                                                // Store the classifier
+        
+        let label = 'cлушаю...';                                       // Label
+        
+        let soundModel = "https://biometricz.github.io/models/beeTest/";             // Model   
+        
+        function preload() {
+          classifier = ml5.soundClassifier(soundModel + 'model.json'); // Load the model
+        }
+        
+        function setup() {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var width = w - 200;
+        var height = h - 200;
+          createCanvas( width, height);
+          // background(0);
+          // fill(255);
+          // Start classifying
+          // The sound model will continuously listen to the microphone
+          classifier.classify(gotResult);
+        }
+        
+        function draw() {
+          // background(0);
+          // Draw the label in the canvas
+          fill(255);
+          textSize(32);
+          textAlign(CENTER, CENTER);
+          text(label, width / 2, height / 2);
+        }
+        
+        
+       
+        function gotResult(error, results) {    // The model recognizing a sound will trigger this event
+          if (error) {
+            console.error(error);
+            return;                              // The results are in an array ordered by confidence.
+          }
+         
+
+          function changes() { // console.log(results + ' [ ]');
+      document.getElementById('rs').innerHTML=( '<span class="lbl">' + results[0].label + ' = </span>' + results[0].confidence.toFixed(7) + ' <br> ' + '<span class="lbl">' + results[1].label + ' = </span>' + results[1].confidence.toFixed(7) + ' <br> ' + '<span class="lbl">' + results[2].label + ' = </span>' + results[2].confidence.toFixed(7) + ' <br> ' + '<span class="lbl">' + results[3].label + ' = </span>' + results[3].confidence.toFixed(7) + ' <br> ' + '<span class="lbl">' + results[4].label + ' = </span>' + results[4].confidence.toFixed(7));
+   /* console.log(results[0].label + ' = ' + results[0].confidence );
+      console.log(results[1].label + ' = ' + results[1].confidence );        
+      console.log(results[2].label + ' = ' + results[2].confidence );
+      console.log(results[3].label + ' = ' + results[3].confidence ); */
+/*                                                                                                                                 */
+      document.getElementById('lbl').innerHTML=(results[0].label);
+      document.getElementById('cnf').innerHTML=(results[0].label +' = '+ results[0].confidence.toFixed(3)+'%');
+      document.getElementById('wdt').innerHTML=(width);
+      document.getElementById('hgt').innerHTML=(height);
+             } changes()
+            }
+        </script>
+        
+    </body>
+    
+    </html>
