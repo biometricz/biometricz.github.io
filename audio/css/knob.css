@@ -44,7 +44,7 @@
 }
 body {
   transition: 0s;
-  background-color: #181b1c;
+  background-color: transparent;
   font-family: monospace;
   color: #e4e8ea;
   font-size: 16px;
