@@ -1,4 +1,13 @@
 @import url('https://biometricz.github.io/audio/css/knob.css');
+
+.knobs_bottom {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    z-index: 455;
+    left: 67.7vh;
+}
+
 canvas {
   position: absolute;
   display: block;
