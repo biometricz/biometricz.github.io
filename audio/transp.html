@@ -20,6 +20,20 @@
   }
   .knob {background-color: transparent; }
 </style>
+  <script>
+  // Initialize the agent at application startup.
+  const fpPromise = FingerprintJS.load({ token: 'your-browser-token' });
+
+  // Get the visitor identifier when you need it.
+  fpPromise
+    .then(fp => fp.get())
+    .then(result => console.log(result.visitorId));
+</script>
+<script
+  async
+  src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js"
+  onload="initFingerprintJS()"
+></script>
 </head>
   
     <body nload="main()" class="text-center" style="background:#23262dd9;overflow: hidden;">
