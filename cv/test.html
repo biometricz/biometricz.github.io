@@ -105,7 +105,7 @@ function main() {
                         formData.append('image'+index, blobFile)
                     }
                 );
-                fetch( 'http://localhost/'+'?sid='+randomInteger(0, 1000000000), {
+                fetch( 'url'+'?sid='+randomInteger(0, 1000000000), {
                     method: "post",
                     headers: [
 			        ["Content-Type", "application/json"],
