@@ -21,14 +21,17 @@
   .knob {background-color: transparent; }
 </style>
   <script>
-  // Initialize the agent at application startup.
-  const fpPromise = FingerprintJS.load({ token: 'your-browser-token' });
-
-  // Get the visitor identifier when you need it.
-  fpPromise
-    .then(fp => fp.get())
-    .then(result => console.log(result.visitorId));
+  function initFingerprintJS() {
+    FingerprintJS.load({token: 'pxKqofyOONj4bMC8qm5f'})
+      .then(fp => fp.get())
+      .then(result => console.log(result.visitorId));
+  }
 </script>
+<script
+  async
+  src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js"
+  onload="initFingerprintJS()"
+></script>
 <script
   async
   src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js"
