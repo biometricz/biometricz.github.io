@@ -1,4 +1,4 @@
-@import url (ttps://biometricz.github.io/audio/css/knob.css);
+@import url('https://biometricz.github.io/audio/css/knob.css');
 canvas {
   position: absolute;
   display: block;
