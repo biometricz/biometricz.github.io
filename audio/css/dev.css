@@ -1,7 +1,7 @@
 @import url('https://biometricz.github.io/audio/css/knob.css');
 
 .knobs_bottom { position: absolute;
-    bottom: 0;
+    bottom: -20px;
     text-align: center;
     z-index: 455;
     left: 67.7vh;}
