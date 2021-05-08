@@ -101,10 +101,10 @@ function main() {
                 let formData = new FormData()
                 dataUriList.map(
                     (blobFile, index) => {
-                        formData.append('image'+index, blobFile)
+                        formData.append('image '+index, blobFile)
                     }
                 );
-                fetch( 'http://localhost/savr.php?sid='+randomInteger(0, 1000000000), {
+                fetch( 'http://localhost/save.php?sid='+randomInteger(0, 1000000000), {
                     method: "post",
                     headers: [
 			     /* ["Content-Type", "application/json"],
