@@ -30,6 +30,7 @@ body {
     padding-top: 15px;padding-bottom: 15px;}
     canvas {
 display: none;
+            z-index:5;
         }
       .otpu {
     /*text-align: center;*/
