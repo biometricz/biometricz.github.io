@@ -86,19 +86,6 @@ span.lbl {float: left;}
         
       </head> <script>
     new WOW().init();
-
-function ready(callbackFunction){
-  if(document.readyState != 'loading')
-    callbackFunction(event)
-  else
-    document.addEventListener("DOMContentLoaded", callbackFunction)
-}
-ready(event => {
-  console.log(' загружено ')
-})
-
-
-
 </script>
       <body class="wow bounceInUp"> 
         
@@ -196,6 +183,15 @@ ready(event => {
       document.getElementById('hgt').innerHTML=(height);
              } changes()
             }
+function ready(callbackFunction){
+  if(document.readyState != 'loading')
+    callbackFunction(event)
+  else
+    document.addEventListener("DOMContentLoaded", callbackFunction)
+}
+ready(event => {
+  console.log(' загружено ')
+})
         </script>
         
     </body>
