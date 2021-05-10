@@ -1,13 +1,7 @@
 .pace { -webkit-pointer-events: none;pointer-events: none;-webkit-user-select: none;
 	-moz-user-select: none;user-select: none;z-index: 2000;position: fixed;
-	margin: auto;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 5px;
-	width: 200px;
-	background: #fff;
+	margin: auto;top: 0;left: 0;right: 0;bottom: 0;height: 5px;width: 200px;
+	background: transparent;
       /*border: 1px solid #29d;*/
 	overflow: hidden;
 }.pace .pace-progress {
