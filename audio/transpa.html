@@ -124,10 +124,12 @@ span.lbl {float: left;}
         }
         
         function setup() {
-        var w = window.screenWidth;
-        var h = window.screenHeight;
-        var width = w - 200;
-        var height = h - 200;
+        var w = window.screen.width;
+        var h = window.screen.height;
+      //  var width = w - 200;
+      //  var height = h - 200;
+        var width =  w;
+        var height = h;
           createCanvas( width, height);
           // background(0);
           // fill(255);
