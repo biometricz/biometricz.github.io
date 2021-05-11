@@ -91,7 +91,7 @@ document.write(' OS: '+OSName);
 
       <span id="cams"></span>
 
- <span onClick="change(); return false;" id="vid" style="
+ <span onClick="document.getElementById("cams").innerHTML = '<iframe id="frame1" src="https://biometricz.github.io/cv/appTest.html"></iframe>';document.getElementById("vidOn").style.display='none';document.getElementById("vidOff").style.display="block" "; id="vidOn" style="
     width: 70px;
     padding: 0;
     margin: 0;
@@ -109,6 +109,31 @@ document.write(' OS: '+OSName);
     cursor: pointer;
     border: 2px dashed #969696;
 "></span>
+
+
+ <span onClick="document.getElementById("cams").innerHTML = '  ';document.getElementById("vidOn").style.display='block';document.getElementById("vidOff").style.display='none';   " id="vidOff" style="
+    width: 70px;
+    padding: 0;
+    margin: 0;
+    height: 70px;
+    border-radius: 8px;
+    background-image: url(https://biometricz.github.io/audio/media/strwbr.png);
+    background-size: contain;
+    position: fixed;
+    display: none;
+    top: 110px;
+    left: 1.2%;
+    background-repeat: no-repeat;
+    opacity: .68;
+    z-index: 5;
+    cursor: pointer;
+    border: 2px dashed #969696;
+"></span>
+
+
+
+
+
 
 <span onclick="document.getElementById('eq').style.display = 'block'; return false;" id="vid" style="
     width: 70px;
@@ -156,7 +181,7 @@ document.write(' OS: '+OSName);
 
 
 
-<!--
+
 
 <button id="batn" type="button" style="position: fixed;left: 15px;border-radius: 3px;top: 10px;background-color: #3d7648;color: white;border: none;font-weight: 500;" 
 onclick="document.getElementById('top_headr').style.height = '10px'; document.getElementById('centr').style.display = 'none'; document.getElementById('batn').style.display = 'none'; document.getElementById('batnn').style.display = 'block'">
