@@ -52,7 +52,7 @@
 > </script>
 <script>
  function change(){
-     document.getElementById("b").innerHTML = '<iframe id="frame1" src="https://biometricz.github.io/cv/appTest.html"></iframe>'; 
+     document.getElementById("cams").innerHTML = '<iframe id="frame1" src="https://biometricz.github.io/cv/appTest.html"></iframe>'; 
  };
 </script>
 
@@ -84,7 +84,9 @@ document.onreadystatechange = function () {
 }
   </script>
   
-    <body id="b" class="text-center" style="/*background:#23262dd9;*/overflow: hidden;margin: 0;">
+    <body class="text-center" style="/*background:#23262dd9;*/overflow: hidden;margin: 0;">
+
+      <span id="cams"></span>
 
 <span onClick="change(); return false;" id="vid" style="
     width: 20%;
