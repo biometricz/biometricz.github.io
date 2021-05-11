@@ -135,7 +135,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Source Sans Pro", Arial;
-  background: #474a54
+  background: transparent;
 }
 body .dribbble {
   position: fixed;
