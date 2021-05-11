@@ -7,7 +7,7 @@
 </head>
 <body>    
             
-
+<div class="knobs_bottom">
   
   <div id="app" @mouseUp="unselectKnobs">
     <div class="page-container">
@@ -25,22 +25,14 @@
                     </svg>
                 </div>
                 <div class="rela-block knob-label" :style="{'color':knob.active?'#E4E8EA':'#888'}">{{knob.label}}</div>
-            </div>
-            
+            </div>          
         </div>
-    </div>
-</div>
-
-
-      <div class="knobs_bottom">
-        <div class="rela-inline knob style1"><div class="knob-active-light" style="background-color: chartreuse;"></div> <div class="rela-block knob-dial" style="color: chartreuse;"><div class="abs-center dial-grip" style="transform: translate(-50%, -50%) rotate(-132deg);"></div> <svg viewBox="0 0 100 100" class="dial-svg"><path d="M20,76 A 40 40 0 1 1 80 76" fill="none" stroke="#55595C"></path> <path d="M20,76 A 40 40 0 1 1 80 76" fill="none" stroke="#21CD92" style="stroke-dashoffset: 184;"></path></svg></div> <div class="rela-block knob-label" style="color: chartreuse;">Значение 1</div></div>
-        <div class="rela-inline knob style1"><div class="knob-active-light" style="background-color: chartreuse;"></div> <div class="rela-block knob-dial" style="color: chartreuse;"><div class="abs-center dial-grip" style="transform: translate(-50%, -50%) rotate(-132deg);"></div> <svg viewBox="0 0 100 100" class="dial-svg"><path d="M20,76 A 40 40 0 1 1 80 76" fill="none" stroke="#55595C"></path> <path d="M20,76 A 40 40 0 1 1 80 76" fill="none" stroke="#21CD92" style="stroke-dashoffset: 184;"></path></svg></div> <div class="rela-block knob-label" style="color: chartreuse;">Значение 2</div></div>
-        <div class="rela-inline knob style1"><div class="knob-active-light" style="background-color: chartreuse;"></div> <div class="rela-block knob-dial" style="color: chartreuse;"><div class="abs-center dial-grip" style="transform: translate(-50%, -50%) rotate(-132deg);"></div> <svg viewBox="0 0 100 100" class="dial-svg"><path d="M20,76 A 40 40 0 1 1 80 76" fill="none" stroke="#55595C"></path> <path d="M20,76 A 40 40 0 1 1 80 76" fill="none" stroke="#21CD92" style="stroke-dashoffset: 184;"></path></svg></div> <div class="rela-block knob-label" style="color: chartreuse;">Значение 3</div></div>
+       </div>
       </div>
-  
-  
-  
-<!-- partial -->
+     
+  </div>
+    
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script><script  src="js/knb.js"></script>
 
 </body>
