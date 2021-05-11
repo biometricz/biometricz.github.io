@@ -172,6 +172,11 @@ document.write(' OS: '+OSName);
     console.log( document.documentElement.clientWidth + ' % шир');   // ширина минус прокрутка
     console.log( window.innerHeight + ' выс');                       // вся высота окна
     console.log( document.documentElement.clientHeight + '  % выс'); // высота минус прокрутка */
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    console.log( 'Рэди Стэйт 1');
+  }
+}
   </script>
 
   
