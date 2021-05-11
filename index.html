@@ -54,6 +54,9 @@ document.onreadystatechange = function () {
  function change(){
      document.getElementById("cams").innerHTML = '<iframe id="frame1" src="https://biometricz.github.io/cv/appTest.html"></iframe>'; 
  };
+   function change1(){
+     document.getElementById("eq").innerHTML = '<script src='audio/js/eq.js'> </script>'; 
+ };
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
@@ -106,7 +109,7 @@ document.write(' OS: '+OSName);
     border: 2px dashed #969696;
 "></span>
 
-<span onclick="change(); return false;" id="vid" style="
+<span onclick="change1(); return false;" id="vid" style="
     width: 15%;
     padding: 0;
     margin: 0;
@@ -145,7 +148,7 @@ document.write(' OS: '+OSName);
   
       
  <eq id="eq">
-     <script src="audio/js/eq.js"> </script>  
+  
       </eq>
 
 
