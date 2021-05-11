@@ -91,7 +91,24 @@ document.onreadystatechange = function () {
     cursor: pointer;
     border: 2px dashed #969696;}
   #cams{display:none;}
-  #vid {
+  #vidA {
+    width: 70px;
+    padding: 0;
+    margin: 0;
+    height: 70px;
+    border-radius: 8px;
+    background-image: url(https://biometricz.github.io/audio/media/bee.png);
+    background-size: contain;
+    position: fixed;
+    display: block;
+    top: 110px;
+    left: 102px;
+    background-repeat: no-repeat;
+    opacity: .68;
+    z-index: 5;
+    cursor: pointer;
+    border: 2px dashed #969696;}
+  #vidB {
     width: 70px;
     padding: 0;
     margin: 0;
@@ -169,17 +186,12 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
 <!------------------------------------------------------------>
 <!------------------------------------------------------------>
 
-
-
-
-
-
-<span id="vid" onclick="document.getElementById('eq').style.display = 'block'; return false;" style=""></span>
+<span id="vidA" onclick="document.getElementById('eq').style.display = 'block';return false;"></span>
+<span id="vidB" onclick="document.getElementById('eq').style.display = 'none' ;return false;"></span>
     
 
-      <a href="/">
-        <div style="position: absolute;font-size: 1.42em;left: 40%;top: 48.25px;color: #969696;
-    ">↻</div></a>
+
+      
     <span class="decA" style="width: 20%;height: 2px;position: absolute;margin: 0;top: 55px;display: block;left: 12%;z-index: 1;background-color: #969696;"></span>
       
 
@@ -214,6 +226,15 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
  ">свернуть
 </button>
 <!----------------------------------------------------------- ->
+
+
+     <!-- <a href="/">
+        <div style="position: absolute;font-size: 1.42em;left: 40%;top: 48.25px;color: #969696;">
+          ↻
+        </div>
+      </a> -->
+
+
 <!----------------------------------------------------------- ->
 <button id="batnn" 
    type=   "button"
