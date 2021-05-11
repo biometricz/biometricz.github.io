@@ -292,7 +292,6 @@ function sortShuffle(a) {
     for (var b = a.length, c = void 0, d = void 0; 0 !== b;) d = Math.floor(Math.random() * b), b -= 1, c = a[b], a[b] = a[d], a[d] = c;
     return a
 }
-/*
 function checkHTTPS() {
     if ("https:" !== location.protocol) {
         var a = document.createElement("div");
@@ -304,7 +303,6 @@ function checkHTTPS() {
     }
     return !0
 }
-*/
 function divisible(a, b, c) {
     c = c || {
         x: 0,
@@ -340,7 +338,7 @@ function drawLines(a, b) {
     for (var c = 2; c < b.length - 1; c += 2) a.lineTo(b[c], b[c + 1])
 }
 console.clear();
-    //var https = checkHTTPS(),
+    var https = checkHTTPS(),
     $ = {},
     A = {},
     S = {},
