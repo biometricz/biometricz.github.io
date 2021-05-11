@@ -91,6 +91,23 @@ document.onreadystatechange = function () {
     cursor: pointer;
     border: 2px dashed #969696;}
   #cams{display:none;}
+  #vid {
+    width: 70px;
+    padding: 0;
+    margin: 0;
+    height: 70px;
+    border-radius: 8px;
+    background-image: url(https://biometricz.github.io/audio/media/bee.png);
+    background-size: contain;
+    position: fixed;
+    display: block;
+    top: 110px;
+    left: 102px;
+    background-repeat: no-repeat;
+    opacity: .68;
+    z-index: 5;
+    cursor: pointer;
+    border: 2px dashed #969696;}
 </style>
 <script>
  /*function change(){
@@ -157,24 +174,7 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
 
 
 
-<span onclick="document.getElementById('eq').style.display = 'block'; return false;" id="vid" style="
-    width: 70px;
-    padding: 0;
-    margin: 0;
-    height: 70px;
-    border-radius: 8px;
-    background-image: url(https://biometricz.github.io/audio/media/bee.png);
-    background-size: contain;
-    position: fixed;
-    display: block;
-    top: 110px;
-    left: 102px;
-    background-repeat: no-repeat;
-    opacity: .68;
-    z-index: 5;
-    cursor: pointer;
-    border: 2px dashed #969696;
-"></span>
+<span id="vid" onclick="document.getElementById('eq').style.display = 'block'; return false;" style=""></span>
     
 
       <a href="/">
