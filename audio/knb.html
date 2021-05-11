@@ -7,11 +7,8 @@
 
 </head>
 <body>
+ 
 
-  
-<div id="app" @mouseUp="unselectKnobs">
-    <div class="page-container">
-        <div class="rela-block container">
             
             <!-- Effects -->
             <div v-for="effect in effects" class="rela-inline effect-container" @mouseDown="effect.selected = true;" style="display:none;">
@@ -37,6 +34,10 @@
             </div>
             
             <br>
+  
+  <div id="app" @mouseUp="unselectKnobs">
+    <div class="page-container">
+        <div class="rela-block container">
             
             <!-- Knobs -->
             <div v-for="knob in knobs" :class="['rela-inline', 'knob', 'style'+knob.style]">
