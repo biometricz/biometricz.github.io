@@ -71,6 +71,18 @@
   }</script>
 
 </head>
+
+  <script>
+   /* console.log( window.innerWidth + ' шир');                        // вся ширина окна
+    console.log( document.documentElement.clientWidth + ' % шир');   // ширина минус прокрутка
+    console.log( window.innerHeight + ' выс');                       // вся высота окна
+    console.log( document.documentElement.clientHeight + '  % выс'); // высота минус прокрутка */
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    console.log( 'Рэди Стэйт 1');
+  }
+}
+  </script>
   
     <body id="b" class="text-center" style="/*background:#23262dd9;*/overflow: hidden;margin: 0;">
 
@@ -173,17 +185,7 @@ document.write(' OS: '+OSName);
 
       </eq>
   
-  <script>
-   /* console.log( window.innerWidth + ' шир');                        // вся ширина окна
-    console.log( document.documentElement.clientWidth + ' % шир');   // ширина минус прокрутка
-    console.log( window.innerHeight + ' выс');                       // вся высота окна
-    console.log( document.documentElement.clientHeight + '  % выс'); // высота минус прокрутка */
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-    console.log( 'Рэди Стэйт 1');
-  }
-}
-  </script>
+
 
   
   
