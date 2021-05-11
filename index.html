@@ -186,8 +186,8 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
 <!------------------------------------------------------------>
 <!------------------------------------------------------------>
 
-<span id="vidA" onclick="document.getElementById('eq').style.display = 'block';return false;"></span>
-<span id="vidB" onclick="document.getElementById('eq').style.display = 'none' ;return false;"></span>
+<span id="vidA" onclick="document.getElementById('eq').style.display = 'block';document.getElementById('vidA').style.display = 'none';document.getElementById('vidB').style.display = 'block';return false;"></span>
+<span id="vidB" onclick="document.getElementById('eq').style.display = 'none' ;document.getElementById('vidB').style.display = 'none';document.getElementById('vidA').style.display = 'block';return false;"></span>return false;"></span>
     
 
 
