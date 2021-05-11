@@ -69,6 +69,22 @@ document.onreadystatechange = function () {
     z-index: 5;
     cursor: pointer;
     border: 2px dashed #969696;}
+  #vidOff{width: 70px;
+    padding: 0;
+    margin: 0;
+    height: 70px;
+    border-radius: 8px;
+    background-image: url(https://biometricz.github.io/audio/media/strwbr.png);
+    background-size: contain;
+    position: fixed;
+    display: none;
+    top: 110px;
+    left: 1.2%;
+    background-repeat: no-repeat;
+    opacity: .68;
+    z-index: 5;
+    cursor: pointer;
+    border: 2px dashed #969696;}
 </style>
 <script>
  /*function change(){
@@ -110,28 +126,16 @@ document.write(' OS: '+OSName);
 
       <span id="cams"></span>
 
- <span id="vidOn" onClick="document.getElementById("cams").innerHTML = '<iframe id="frame1" src="https://biometricz.github.io/cv/appTest.html"></iframe>';
-                           document.getElementById("vidOn").style.display='none';
+ <span id="vidOn" onClick="document.getElementById("  cams").innerHTML = '<iframe id="frame1" src="https://biometricz.github.io/cv/appTest.html"></iframe>';
+                           document.getElementById(" vidOn").style.display='none';
                            document.getElementById("vidOff").style.display='block';"></span>
 
 
- <span onClick="document.getElementById("cams").innerHTML = '  ';document.getElementById("vidOn").style.display='block';document.getElementById("vidOff").style.display='none';   " id="vidOff" style="
-    width: 70px;
-    padding: 0;
-    margin: 0;
-    height: 70px;
-    border-radius: 8px;
-    background-image: url(https://biometricz.github.io/audio/media/strwbr.png);
-    background-size: contain;
-    position: fixed;
-    display: none;
-    top: 110px;
-    left: 1.2%;
-    background-repeat: no-repeat;
-    opacity: .68;
-    z-index: 5;
-    cursor: pointer;
-    border: 2px dashed #969696;
+ <span onClick="document.getElementById("  cams").innerHTML = '';
+                document.getElementById(" vidOn").style.display='block';
+                document.getElementById("vidOff").style.display='none';"
+                                     id="vidOff" style="
+
 "></span>
 
 
