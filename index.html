@@ -46,6 +46,7 @@ document.onreadystatechange = function () {
     z-index: 1;top: 10px;
     font-size: 2em;color:#969696;
     padding-left: 107px;}
+  #eq{display:none;}
 </style>
 <script>
  function change(){
@@ -106,13 +107,13 @@ document.write(' OS: '+OSName);
     border: 2px dashed #969696;
 "></span>
 
-<span onclick="change1(); return false;" id="vid" style="
+<span onclick="document.getElementById('eq').style.display = 'block'; return false;" id="vid" style="
     width: 70px;
     padding: 0;
     margin: 0;
     height: 70px;
     border-radius: 8px;
-   /* background-image: url(https://biometricz.github.io/audio/media/bee.png);*/
+ /* background-image: url(https://biometricz.github.io/audio/media/bee.png);*/
     background-size: contain;
     position: fixed;
     display: block;
@@ -149,3 +150,17 @@ document.write(' OS: '+OSName);
 </body>
 
 </html>
+
+
+
+<!--
+
+<button id="batn" type="button" style="position: fixed;left: 15px;border-radius: 3px;top: 10px;background-color: #3d7648;color: white;border: none;font-weight: 500;" 
+onclick="document.getElementById('top_headr').style.height = '10px'; document.getElementById('centr').style.display = 'none'; document.getElementById('batn').style.display = 'none'; document.getElementById('batnn').style.display = 'block'">
+свернуть</button>
+
+<button id="batnn" type="button" style="display:none;position: fixed;left: 15px;border-radius: 3px;top: 10px;background-color: #3d7648;color: white;border: none;font-weight: 500;" 
+onclick="document.getElementById('top_headr').style.height = '24vh'; document.getElementById('centr').style.display = 'block'; document.getElementById('batn').style.display = 'block'; document.getElementById('batnn').style.display = 'none'">
+развернуть</button>
+
+-->
