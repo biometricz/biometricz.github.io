@@ -25,14 +25,12 @@ document.onreadystatechange = function () {
         opacity: 1;
     }
    } body {-webkit-animation: f 3.5s ease-out;overflow: hidden;margin: 0;}
-  #frame1{position: fixed;
-    width: 100%;
+  #frame1{position: fixed;width: 100%;
     border: 0;
-    top: 148px;
-    left: 25px;
+    top: 20%;
+    left: 15%;
     height: 100%;
-    z-index: 1;
-    opacity: 1;}
+    z-index: 1;opacity: .85;}
    eq#eq {position: absolute;
     width: 98%;
     height: 25%;
@@ -71,10 +69,10 @@ document.onreadystatechange = function () {
     top: 2.5px;
     left: 2.5px;
     background-repeat: no-repeat;
-    background-color: #ffffff;
+    opacity: .68;
     z-index: 5;
     cursor: pointer;
- /* border: 2px dashed #969696;}*/
+    border: 2px dashed #969696;}
   #vidOff{width: 70px;
     width: 70px;
     padding: 0;
@@ -88,10 +86,10 @@ document.onreadystatechange = function () {
     top: 2.5px;
     left: 2.5px;
     background-repeat: no-repeat;
-    background-color: #ffffff;
+    opacity: .68;
     z-index: 5;
     cursor: pointer;
- /* border: 2px dashed #969696;*/}
+    border: 2px dashed #969696;}
   #cams{display:none;}
   #vidA {width: 70px;
     padding: 0;
@@ -106,10 +104,10 @@ document.onreadystatechange = function () {
     top: 77px;
     left: 2.5px;
     background-repeat: no-repeat;
-    background-color: #ffffff;
+    opacity: .68;
     z-index: 5;
     cursor: pointer;
- /* border: 2px dashed #969696;} */
+    border: 2px dashed #969696;}
   #vidB {width: 70px;
     padding: 0;
     margin: 0;
@@ -123,10 +121,10 @@ document.onreadystatechange = function () {
     top: 77px;
     left: 2.5px;
     background-repeat: no-repeat;
-    background-color: #ffffff;
+    opacity: .68;
     z-index: 5;
     cursor: pointer;
- /* border: 2px dashed #969696;} */
+    border: 2px dashed #969696;}
 </style>
 <script>
  /*function change(){
@@ -188,8 +186,8 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
 <!------------------------------------------------------------>
 <!------------------------------------------------------------>
 
-<span id="vidA" onclick="document.getElementById('eq').style.display = 'block';document.getElementById('vidA').style.display = 'none';document.getElementById('vidB').style.display = 'block';return false;"></span>
-<span id="vidB" onclick="document.getElementById('eq').style.display = 'none' ;document.getElementById('vidB').style.display = 'none';document.getElementById('vidA').style.display = 'block';return false;"></span>
+<span id="vidA" onclick="document.getElementById('eq').style.display = 'block';return false;"></span>
+<span id="vidB" onclick="document.getElementById('eq').style.display = 'none' ;return false;"></span>
     
 
 
