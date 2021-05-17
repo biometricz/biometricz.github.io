@@ -32,14 +32,14 @@ document.onreadystatechange = function () {
 }
   #frame1{position: fixed;width: 100%;
     border: 0;
-    top: 20%;
+    top: 20vh;
     left: 15%;
     height: 100%;
     z-index: 1;opacity: .85;}
    eq#eq {position: absolute;
     width: 98%;
-    height: 25%;
-    top: 35%;
+    height: 25vh;
+    top: 35vh;
    /* border: 2px dashed #969696;*/
     margin: 1%;
   /*  display: none; */
@@ -52,7 +52,7 @@ document.onreadystatechange = function () {
   iframe#frame {
     width: 80%;
     position: fixed;
-    height: 80%;
+    height: 80vh;
     border: 0;
     z-index: -2;
     left: 25%;
@@ -196,8 +196,8 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
 <!------------------------------------------------------------>
 <!------------------------------------------------------------>
 
-<span id="vidA" onclick="document.getElementById('eq').style.display = 'block';document.getElementById('vidA').style.display = 'none';"></span>
-<span id="vidB" onclick="document.getElementById('eq').style.display = 'none' ;document.getElementById('vidB').style.display = 'block';"></span>
+<span id="vidA" onclick="document.getElementById('eq').style.display = 'none';document.getElementById('vidA').style.display = 'none';document.getElementById('vidB').style.display = 'block';"></span>
+<span id="vidB" onclick="document.getElementById('eq').style.display = 'block' ;document.getElementById('vidB').style.display = 'block';document.getElementById('vidA').style.display = 'none';"></span>
     
 
 
