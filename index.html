@@ -261,7 +261,11 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
       </eq>
   
 <!----------------------------------------------------------------------------->
-      <div class="graph"></div>
+      <div class="graph"><span style="
+    text-align: center;
+    width: 100%;
+    display: block;
+">connect</span></div>
  <script>
       document.addEventListener('DOMContentLoaded', async () => {
       const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
