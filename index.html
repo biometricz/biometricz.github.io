@@ -20,12 +20,12 @@
             console.log( ' загружено');
     } else {  }
           }    </script>
+  
               <style>
-        svg {transition: unset;fill: darkgreen;}
-        line.link {transition: unset;stroke:#ffe500!important;}
-                  text.text{
-   
-}
+                  
+        svg {transition: unset;fill:#7fff00;}
+        line.link {transition: unset;stroke:#ffe928!important;}
+
   @-webkit-keyframes f {
     0% {display: none;
         opacity: 0;
@@ -159,7 +159,7 @@
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"> -->
     <link rel="stylesheet" href="audio/css/pace.css">
     <script>
   paceOptions = {
@@ -258,11 +258,11 @@ document.getElementById("cams").style.display="none";document.getElementById("vi
       </eq>
   
 <!----------------------------------------------------------------------------->
-      <div class="graph"><span style="
+   <div class="graph"><span style="
     text-align: center;
     width: 100%;
     display: block;
-">connect</span></div>
+">connections</span></div>
  <script>
       document.addEventListener('DOMContentLoaded', async () => {
       const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
@@ -321,7 +321,33 @@ graph.connect('Thing1', 'Thing4')
 }, 4000)
 });
 /*-------------------------------------------------------------------------*/
-</script>  
+</script>
+
+
+
+<div class="HW_inf" style="
+    position: fixed;
+    top: 100vh;
+">
+  <span id="wdt" class="wdt" style="color: chartreuse;position: fixed;bottom: 200px; left: 11px;">0000</span> 
+<span class="xy" style="
+    position: absolute;
+    left: 33px;
+    bottom: 18px;
+    color: #ffeb3b;
+    text-decoration: overline;
+    width: 130px;
+    height: 130px;
+    color: transparent;
+    border-bottom: 2px dashed chartreuse;
+    border-left: 2px dashed chartreuse;
+    border-radius: 0px 0px 0px 7px;
+                        "> </span>
+     <span id="hgt" class="hgt" style="color: chartreuse;position: fixed;left: 225px;bottom: 10px;">000</span>
+       </div>
+
+
+
 </body>
 
 </html>
