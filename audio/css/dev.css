@@ -1,10 +1,10 @@
-.knobs_bottom { position: absolute;
+/*.knobs_bottom {position: absolute;
     bottom: -20px;
     text-align: center;
     z-index: 2;
-    left: 59.75vh;}
+    left: 59.75vh;}*/
 
-canvas { position: absolute;
+canvas {position: absolute;
   display: block;
   top: 0;
   right: 0;
@@ -14,8 +14,7 @@ canvas { position: absolute;
    height: 100%; z-index:1;}
 
 .decA {width: 20%;height: 2px;position: absolute;margin: 0;top: 55px;display: block;left: 12%;z-index: 1;background-color: orange;}
-
-.decB {    width: 20%;height:2px;position:absolute;
+.decB {width: 20%;height:2px;position:absolute;
     margin: 0;top: 45px;
     display: block;left: 30%;
     z-index: 1;background-color:orange;}
