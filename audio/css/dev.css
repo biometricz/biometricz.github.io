@@ -5,7 +5,7 @@
     text-align: center;
     z-index: 2;
     left: 59.75vh;}*/
-
+body{font-family: 'Jura', sans-serif;}
 canvas {position: absolute;
   display: block;
   top: 0;
