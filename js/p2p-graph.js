@@ -11046,7 +11046,7 @@ var STYLE = {
 
 var COLORS = {
   links: {
-    color: '#C8C8C8'
+    color: '#ffe500'
   },
   text: {
     subtitle: '#007505'
