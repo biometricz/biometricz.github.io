@@ -2,26 +2,26 @@
 <html lang="ru" >
 <head> 
 
-  <meta charset="UTF-8">
-  <title> @ </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link rel="stylesheet" href="audio/css/dev.css"/>
-  <script src="https://blckhle.github.io/test/p2p-graph.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
-
-  <!--<script src="https://kit.fontawesome.com/969af07023.js" crossorigin="anonymous"></script>-->
+    <meta charset="UTF-8">
+    <title> @ </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="audio/css/dev.css"/>
+    <script src="https://blckhle.github.io/test/p2p-graph.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+<!--<script src="https://kit.fontawesome.com/969af07023.js" crossorigin="anonymous"></script>-->
 
 <script> 
  var w = window.innerWidth;
  var h = window.innerHeight;
          document.getElementById('wdt').innerHTML=(w);
          document.getElementById('hgt').innerHTML=(h);
-
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-    console.log( ' загружено');
-     } else {  } } </script>
-<style>.knob {background-color: transparent;}
+         document.onreadystatechange = function () {
+     if (document.readyState == "complete") {
+         console.log( ' загружено');
+   } else {  }
+         }    </script>
+<style>
+  .knob {background-color: transparent;}
   @-webkit-keyframes f {
     0% {display: none;
         opacity: 0;
@@ -37,13 +37,13 @@ document.onreadystatechange = function () {
      text.text {font-size: 10px;color: green!important;}
 /*-----------------------------------------------------------------*/
 
- body {-webkit-animation: f 3.5s ease-out;overflow: hidden;margin: 0;
+ body {
+       -webkit-animation: f 3.5s ease-out;overflow: hidden;margin: 0;
         background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
        -webkit-backdrop-filter: blur(7px);
         backdrop-filter: blur(7px);
         border-radius: 10px;
-  /*border: 1.5px solid rgba(255, 255, 255, 0.08)*/;
-}
+      }
   .graph{position:fixed;top:55vh;width:100%;height:45vh;}
   
   #frame1{position: fixed;width: 100%;
