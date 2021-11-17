@@ -41,7 +41,7 @@ setTimeout(() => {
 graph.add({
 id: 'Thing1',
 me: false,
-name: peerInfos['1']['id']
+name: peerInfos['1']['id'].substr(1, 2)
 })
 graph.connect('You', 'Thing1')
 }, 1000)
