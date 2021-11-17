@@ -1,0 +1,64 @@
+
+    <script src="https://blckhle.github.io/test/p2p-graph.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+
+
+ <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+      const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
+      window.node = node
+/*-------------------------------------------------------------------------*/
+      const status = node.isOnline() ? 'online' : 'offline'
+      console.log(`Node status: `+ status);
+/*-------------------------------------------------------------------------*/
+      const peerInfos = await node.swarm.addrs();
+      console.log(peerInfos['6']);
+      let graph = new window.P2PGraph('.graph')
+      //peerInfos.forEach(info => {
+/*-------------------------------------------------------------------------*/
+graph.add({
+id: 'You',
+me: true,
+name:peerInfos['0']['id']
+})
+
+setTimeout(() => {
+graph.add({
+id: 'Thing1',
+me: false,
+name: peerInfos['1']['id']
+})
+graph.connect('You', 'Thing1')
+}, 1000)
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing2',
+me: false,
+name: peerInfos['2']['id']
+})
+graph.connect('You', 'Thing2')
+}, 2000)
+
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing3',
+me: false,
+name: peerInfos['3']['id']
+})
+graph.connect('Thing1', 'Thing3')
+}, 3000)
+
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing4',
+me: false,
+name: peerInfos['4']['id']
+})
+graph.connect('Thing1', 'Thing4')
+}, 4000)
+});
+/*-------------------------------------------------------------------------*/
+</script>
