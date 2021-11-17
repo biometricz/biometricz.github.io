@@ -24,7 +24,7 @@ svg{fill:#7fff00;}
       console.log(`Node status: `+ status);
 /*-------------------------------------------------------------------------*/
       const peerInfos = await node.swarm.addrs();
-      console.log(peerInfos['6']);
+      console.log(peerInfos['6']);console.log(peerInfos);
       let graph = new window.P2PGraph('.graph')
       //peerInfos.forEach(info => {
 /*-------------------------------------------------------------------------*/
